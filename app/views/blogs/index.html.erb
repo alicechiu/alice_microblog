@@ -1,0 +1,28 @@
+<div class = "col-sm-8">
+  <div class = "table-responsive">
+    <table class = "table table-hover">
+      <!-- This is a table row with headers -->
+        <tr>
+          <th>Videos </th>
+          <th>News </th>
+          <th>Music</th>
+          <th>My microblogs</th>
+        </tr>
+
+        <% @blogs.each do |blog| %>
+        <tr>
+          <td>
+            <%=link_to 'Show', blog_path(blog), class: 'btn btn-default btn-xs' %>
+            <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-success btn-xs' %>
+            <%= link_to 'Delete', blog, method: :delete, data: {confirm: "Confirm blog deletion?"}, class: 'btn btn-xs btn-danger' %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+      </div>
+
+      <div class="well">
+      <%= link_to "Add New Blog", new_blog_path, class: 'btn btn-lg btn-default'%>
+      </div>
+
+      </div>
