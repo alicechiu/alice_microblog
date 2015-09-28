@@ -8,6 +8,7 @@
 #  private     :boolean
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  body        :text
 #
 
 class Blog < ActiveRecord::Base

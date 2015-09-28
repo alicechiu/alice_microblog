@@ -11,14 +11,10 @@
 
         <% @blogs.each do |blog| %>
         <tr>
-          <td>
-            <%=link_to 'Show', blog_path(blog), class: 'btn btn-default btn-xs' %>
-            <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-success btn-xs' %>
-            <%= link_to 'Delete', blog, method: :delete, data: {confirm: "Confirm blog deletion?"}, class: 'btn btn-xs btn-danger' %>
-          </td>
-        </tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.body %></td>
+          </tr>
         <% end %>
-      </table>
       </div>
 
       <div class="well">
