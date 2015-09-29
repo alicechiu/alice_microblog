@@ -1,14 +1,14 @@
 <h1> New microblog</h1>
 
-<%= form_for :article, url: blogs_path do |f| %>
+<%= form_for :blog, url: blogs_path do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
   </p>
 
   <p>

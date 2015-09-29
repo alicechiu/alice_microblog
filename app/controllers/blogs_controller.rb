@@ -4,6 +4,10 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
+  def show
+    @blogs = get_blog
+  end
+
   def new
     @blog = Blog.new
   end
@@ -16,6 +20,7 @@ class BlogsController < ApplicationController
       render "new"
     end
   end
+
 
   private
   def blog_params
