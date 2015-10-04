@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get '/auth/:provider/callback', to: 'sessions#create'
 
   resources :blogs do
     resources :comments
+    resources :tweets
+
+    root to: "tweets#index"
   end
 
   get 'test', to: "static_pages#test"
   root 'static_pages#home'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

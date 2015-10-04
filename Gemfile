@@ -18,6 +18,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-twitter', '~> 1.2.1'
+gem 'twitter'
 
 group :development, :test do
   gem 'byebug'
