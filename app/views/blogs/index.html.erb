@@ -18,14 +18,13 @@
         <tr>
       <td><%= blog.title %></td>
       <td><%= blog.body %></td>
-          </tr>
+        </tr>
         <% end %>
-        <%= link_to "Add New Blog", new_blog_path, class: 'btn btn-lg btn-default'%>
+        <%= link_to "Add New Blog", blogs_path, class: 'btn btn-lg btn-default'%>
       </div>
 
       <div class="form">
         <textarea name="message" rows="10" cols="30" style="background-color:#888888;">some text here some text here some text here </textarea>
         <textarea name="message" rows="10" cols="30" style="background-color:#888888;">some text here some text here some text here </textarea>
-
 
   </div>
